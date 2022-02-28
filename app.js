@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const path = require("path");
 const bodyparser = require("body-parser");
 const app= express();
-const port =80;
+const port = process.env.port || 80;
+
 
 //Define Mongoose Schema
 main().catch(err => console.log(err));
