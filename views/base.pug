@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Dance Academy
+    block scripts
+    block style
+  body
+    nav#navbar 
+      img(src="/static/logo.jpg", alt="Logo")
+      ul.navb
+        li #[a(href="/") Home]
+        li #[a(href="/about") About]
+        li #[a(href="/contact") Contact]
+        li #[a(href="/services") Services]
+    block content
+    footer#footer 
+        | Copyright @ 2022 DanceAcademy.com | All Rights Reserved

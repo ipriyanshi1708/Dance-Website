@@ -1,0 +1,33 @@
+extends base.pug
+
+block scripts
+  script(src='/static/index.js')
+
+block style 
+    style
+      include ../static/style.css
+      include ../static/responsive.css
+
+block content 
+
+    section#introSection 
+        div.big Welcome to Dance Academy 
+        div.small Eat Sleep Dance and Repeat
+
+    section#sponsorsSection 
+        h2 Dance Styles
+        div.container
+          div.image
+            img(src="/static/bharatnatyam.jpg", alt="Bharat Natyam")
+            p Bharat Natyam 
+          div.image  
+            img(src="/static/hiphop1.jpg", alt="Hip Hop")
+            p Hip Hop 
+          div.image    
+            img(src="/static/kathak.jpg", alt="Kathak") 
+            p Kathak
+          div.image
+            img(src="/static/contemporary.jpg", alt="Contemporary") 
+            p Contemporary
+
+

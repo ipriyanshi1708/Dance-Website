@@ -1,0 +1,28 @@
+extends base.pug
+
+block scripts
+  script(src='/static/index.js')
+
+block style 
+    style
+      include ../static/style.css
+      include ../static/styleServices.css
+      include ../static/responsive.css
+    
+block content 
+    h1 Our Services 
+    div.card
+        img(src="/static/wedding.jpg", alt="Wedding Dance")
+        div.style
+            h3 Wedding Dance
+            p The wedding dance is one of the most enjoyable parts of the reception. Guests can enjoy the music to their hearts' content. Beautiful music is playing in the background. The newlyweds entertain their guests with a choreographed first dance. ... The order of dancing can be arranged by the bride and groom.
+    div.card
+        div.style
+            h3 Solo Dance
+            p A solo dance is a dance done by an individual dancing alone, as opposed to couples dancing together but independently of others dancing at the same time, if any, and as opposed to groups of people dancing simultaneously in a coordinated manner.
+        img(src="/static/solo1.jpg", alt="Solo Dance")
+    div.card
+        img(src="/static/group1.jpg", alt="Group Dance")
+        div.style
+            h3 Group Dance
+            p Group dances are danced by groups of people simultaneously, as opposed to individuals dancing alone or individually, and as opposed to couples dancing together but independently of others dancing at the same time, if any

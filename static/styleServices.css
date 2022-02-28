@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Source+Serif+4:ital@1&family=Sriracha&display=swap');
+h1{
+    text-align: center;
+    font-family:'Source Serif 4', sans-serif;
+}
+.card{
+    display: flex;
+    margin: 20px;
+}
+.card img{
+    height: 250px;
+    width: 350px;
+    margin: 15px;
+    border-radius: 10px;
+}
+h3{
+    font-family: 'Source Serif 4', sans-serif;
+    margin: 5px;
+}

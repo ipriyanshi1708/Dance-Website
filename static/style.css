@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Source+Serif+4:ital@1&family=Sriracha&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#navbar img{
+    height: 50px;
+    width: 60px;
+}
+#navbar{
+    display: flex;
+    padding: 10px;
+    background-color: rgba(162, 16, 247, 0.589);
+    font-family: 'Source Serif 4', sans-serif;
+}
+#navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#navbar ul li{
+    list-style: none;
+}
+#navbar ul li a{
+    text-decoration: none;
+    padding: 7px 36px;
+    color: white;
+    cursor: pointer;
+}
+#navbar ul li a:hover{
+    background-color: white;
+    color: rgba(162, 16, 247, 0.589);
+    border-radius: 15px;
+    font-weight: bold;
+}
+#introSection {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    font-family: 'Sriracha', cursive;
+    justify-content: center;
+    align-items: center;
+    background: center/cover no-repeat url('/static/DanceBg.jpg');
+    color: white;
+    text-shadow: 3px 3px rgb(181, 0, 253);
+}
+#introSection div.big{
+    font-size: 60px;
+}
+#introSection div.small{
+    font-size: 40px;
+}
+#sponsorsSection{
+    background-color: rgb(232, 191, 251);
+}
+#sponsorsSection h2{
+    font-family: 'Source Serif 4', sans-serif;
+    text-align: center;
+    padding-top: 15px;
+}
+#sponsorsSection .container{
+    display: flex;
+    flex-direction: row;
+    margin: 25px 50px;
+}
+#sponsorsSection .image{
+   display: flex;
+   flex-direction: column;
+   margin: auto 35px;
+}
+#sponsorsSection .image p{
+   text-align: center;
+   margin: 5px;
+   font-size: 30px;
+}
+#sponsorsSection img{
+    height: 300px;
+    width: 250px;
+    border-radius: 50%;
+}
+#footer{
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 6vh;
+}

@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Source+Serif+4:ital@1&family=Sriracha&display=swap');
+h2,h3{
+    font-family: 'Source Serif 4', sans-serif;
+}
+.box{
+    margin: 20px;
+}
