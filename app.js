@@ -61,7 +61,7 @@ app.get('/services' , (req,res)=>{
 // app.listen(port,()=>{
 //     console.log(`The application started successfully on ${port}`);
 // });
-mongoose.connect("mongodb+srv://Dance-Website:priyanshi@cluster0.u1wuw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://ipriyanshi:priyanshi@cluster0.u1wuw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
