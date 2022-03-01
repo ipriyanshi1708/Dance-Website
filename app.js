@@ -7,6 +7,7 @@ const port = process.env.PORT || 80;
 
 
 //Define Mongoose Schema
+<<<<<<< HEAD
 // main().catch(err => console.log(err));
 
 // async function main() {
@@ -28,6 +29,8 @@ const port = process.env.PORT || 80;
 //     });
 // });
 // }
+=======
+>>>>>>> 3a9b25682a34ffc8e3f79ffa385b9e8a79bee92f
 
 //EXPRESS SPECIFIC STUFF
 app.use('/static', express.static('static'));   //For serving static files
@@ -67,6 +70,25 @@ mongoose.connect("mongodb+srv://ipriyanshi:priyanshi@cluster0.u1wuw.mongodb.net/
   console.log(error.message);
 });
 
+<<<<<<< HEAD
+=======
+
+ 
+//START THE SERVER
+mongoose.connect("mongodb+srv://ipriyanshi:priyanshi@cluster0.u1wuw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => {
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
+})
+.catch((error) => {
+  console.log(error.message);
+});
+
+>>>>>>> 3a9b25682a34ffc8e3f79ffa385b9e8a79bee92f
 const ContactSchema = new mongoose.Schema({
     name: String, 
     email: String, 
@@ -82,4 +104,8 @@ await myData.save().then(()=>{
 }).catch(()=>{
     res.status(400).send("Cannot save the Data.")
 });
+<<<<<<< HEAD
 }) 
+=======
+}) 
+>>>>>>> 3a9b25682a34ffc8e3f79ffa385b9e8a79bee92f
