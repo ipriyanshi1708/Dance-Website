@@ -7,27 +7,27 @@ const port = process.env.PORT || 80;
 
 
 //Define Mongoose Schema
-main().catch(err => console.log(err));
+// main().catch(err => console.log(err));
 
-async function main() {
- await mongoose.connect('mongodb://localhost/contactDance' , {useNewUrlParser: true});
-  var data = new mongoose.Schema({
-    name: String,
-    phone: String,
-    email: String,
-    address: String,
-    issue: String
-  });
-  var Contact = mongoose.model('Contact', data);
-  app.post('/contact' , (req, res)=>{
-    var myData= new Contact(req.body);
-    myData.save().then(()=>{
-        res.send("Your Entries has been saved Successfully");
-    }).catch(()=>{
-        res.status(400).send("Your Entries are not Saved");
-    });
-});
-}
+// async function main() {
+//  await mongoose.connect('mongodb://localhost/contactDance' , {useNewUrlParser: true});
+//   var data = new mongoose.Schema({
+//     name: String,
+//     phone: String,
+//     email: String,
+//     address: String,
+//     issue: String
+//   });
+//   var Contact = mongoose.model('Contact', data);
+//   app.post('/contact' , (req, res)=>{
+//     var myData= new Contact(req.body);
+//     myData.save().then(()=>{
+//         res.send("Your Entries has been saved Successfully");
+//     }).catch(()=>{
+//         res.status(400).send("Your Entries are not Saved");
+//     });
+// });
+// }
 
 //EXPRESS SPECIFIC STUFF
 app.use('/static', express.static('static'));   //For serving static files
@@ -58,6 +58,35 @@ app.get('/services' , (req,res)=>{
 
  
 //START THE SERVER
-app.listen(port,()=>{
-    console.log(`The application started successfully on ${port}`);
+// app.listen(port,()=>{
+//     console.log(`The application started successfully on ${port}`);
+// });
+mongoose.connect("mongodb+srv://Dance-Website:priyanshi@cluster0.u1wuw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => {
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
+})
+.catch((error) => {
+  console.log(error.message);
 });
+
+const ContactSchema = new mongoose.Schema({
+    name: String, 
+    email: String, 
+    phone: String, 
+    address: String, 
+    gender: String, 
+});
+const Contact = mongoose.model('Contact', ContactSchema); 
+app.post('/contact', async (req, res)=> {
+var myData= new Contact(req.body)
+await myData.save().then(()=>{
+    res.status(200).send("Your Data has been saved successfully.")
+}).catch(()=>{
+    res.status(400).send("Cannot save the Data.")
+});
+}) 
