@@ -31,6 +31,18 @@
     }
 }
 
+/* Contact */
+@media screen and (max-width: 700px){
+    .myInput{
+        width: 280px;
+    }
+}
+@media screen and (max-width: 830px){
+    .btn{
+        width: 80px;
+    }
+}
+
 /* Services */
 @media screen and (max-width: 700px){
     .style{
@@ -47,11 +59,7 @@
     .style h3{
         margin: auto;
     }
-}
-
-/* Footer */
-@media screen and (max-width: 650px){
-    #footer{
-        flex-direction: column;
+    .mid{
+        flex-direction: column-reverse;
     }
 }
